@@ -40,7 +40,8 @@ public class strings{
 
         //check if strings are equal
         String str1 = "Hello";
-        String str2 = "Hello";  
+        String str2 = "Hello"; 
+        String str3 = new String("Hello"); 
         if (str1.equals(str2)) {
             System.out.println("Strings are equal");
         } else {
@@ -48,10 +49,23 @@ public class strings{
         }       
 
         //check with ==
-        if (str1 == str2) {
+        if (str1 == str3) {
             System.out.println("Strings are equal");
         } else {
             System.out.println("Strings are not equal");
         }
+
+        int a =10;
+        System.out.println("Value of a: " + a);
+
+        modifyValue(a);
+
+        System.out.println("Value of a after method call: " + a);
+    }
+
+    public static void modifyValue(int a)
+    {
+        a += 10;
+        System.out.println("Modified value of a inside method: " + a);
     }
 }
