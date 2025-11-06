@@ -6,6 +6,9 @@ public class strings{
         String str = "Hello, World!";
         System.out.println("Original String: " + str);
 
+        String formated = str.format("Formatted String: %s", str);
+        System.out.println(formated);
+
         // Length of the string
         int length = str.length();
         System.out.println("Length of the string: " + length);
@@ -25,6 +28,13 @@ public class strings{
         // Replace
         String replacedStr = str.replace("World", "Java");
         System.out.println("Replaced String: " + replacedStr);
+
+        //reverse
+        String reversedStr = new StringBuilder(str).reverse().toString();
+        System.out.println("Reversed String: " + reversedStr);
+
+        String reverseStr2 = new StringBuffer(str).reverse().toString();
+        System.out.println("Reversed String using StringBuffer: " + reverseStr2);   
 
         // Split
         String[] splitStr = str.split(", ");
